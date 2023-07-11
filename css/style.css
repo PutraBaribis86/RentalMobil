@@ -1,0 +1,525 @@
+/*media screen
+@layar tegak S: 320px
+@layar tegak M: 375px
+@layar tegak L: 435px
+@layar tablet: 768px
+@layar laptop: 1024p
+@fullscreen: 1440px*/
+
+/* style global */
+@font-face{
+  src: url(../font/Anton-Regular.woff);
+  font-family: 'Anton';
+}
+@font-face{
+  src: url(../font/Winchester.woff);
+  font-family: 'Winchester';
+}
+@font-face{
+  src: url(../font/RajdhaniMedium.woff);
+  font-family: 'RajdhaniMedium';
+}
+@font-face{
+  src: url(../font/WellandDemo.woff);
+  font-family: 'WellandDemo';
+}
+@font-face{
+  src: url(../font/Montserrat.ttf);
+  font-family: 'Montserrat';
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  color: #306a83;
+  letter-spacing: -0.5px;
+}
+
+/*GLIBAL STYLE */
+.bigContainer{
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+}
+.container,.boxHeader{
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* style header */
+header{
+  max-width: 800px;
+  background:  #144458;
+  margin: auto;
+  border-bottom: .5px solid #888;
+  color: #fff;
+  position: relative;
+  z-index: 999;
+}
+header #boxHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 10px;
+}
+header .brand{
+  color: #fff;
+  font-size: 10px;
+}
+header .navMain{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  border: 3px solid #5eb5da;
+  border-radius: 5px;
+}
+header .navMain .bars, .navMain .close{
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+header .navMain .close{
+  display: none;
+}
+
+/* akhir style header */
+
+/* box menu nav */
+.boxMenuNav{
+  width: 100%;
+  height: 0;
+  background: #2b7a9b;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  z-index: 99;
+}
+.boxMenuNav h2{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  transform: translateY(-300px);
+  font-weight: 400;
+}
+/*akhir box menu nav */
+
+/* jumbotron */
+.jumbotron{
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+.jumbotron .imgTron img{
+  width: 100%;
+  height: 100%;
+}
+
+/* make button larger and change their positions */
+.slick-prev, .slick-next {
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+.slick-prev {
+  left: 5px;
+}
+.slick-next {
+  right: 5px;
+}
+.slick-prev:before, 
+.slick-next:before {
+  font-size: 30px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* move dotted nav position */
+.slick-dots {
+  bottom: 15px;
+}
+/* enlarge dots and change their colors */
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  opacity: 1;
+}
+.slick-dots li.slick-active button:before {
+  color: yellow;
+}
+
+/* hide dots and arrow buttons when slider is not hovered */
+.slider:not(:hover) .slick-arrow,
+.slider:not(:hover) .slick-dots {
+  opacity: 0;
+}
+/* transition effects for opacity */
+.slick-arrow,.slick-dots {
+  transition: opacity 0.5s ease-out;
+}
+/* akhir jumbotron */
+
+/* tentang kamin */
+.tentang{
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  text-align: center;
+}
+.card{
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+}
+.imgcard{
+  width: 85%;
+  height: 80%;
+  position: absolute;
+  background: lightblue;
+  bottom: 10px;
+  left: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+}
+.card::before{
+  content:"";
+  position: absolute;
+  width: 80%;
+  height: 75%;
+  background: skyblue;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+.dsc{
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+.shadowcar{
+  position: absolute;
+  z-index: -1;
+  width: 230px;
+  height: 130px;
+  background: url(../img/shadowcar.png);
+  background-size: cover;
+  background-position: center;
+  bottom: 50px;
+  opacity: .2;
+}
+.dsc h2,h3{
+  font-weight: 500;
+}
+.dsc p{
+  color: #555;
+}
+.dsc a{
+  display: block;
+  width: fit-content;
+  padding: 10px 15px;
+  background: #3cb4d3;
+  color:#fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* akhir tentang kami */
+
+/* Armada kami */
+.armada{
+  max-width: 800px;
+  margin: auto;
+  background: #3cb4d3;
+  color: #fff;
+  text-align: center;
+}
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.boxCar{
+  width: 48%;
+  min-height: 280px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 2px 2px rgba(0,0,0,.3);
+  margin-bottom: 15px;
+}
+.CAR{
+  width: 100%;
+  height: 63%;
+  background: #fff;
+}
+.infoCar{
+  text-align: left;
+  padding: 5px;
+  color: #000;
+  font-size: 13px;
+  /*text-align: center;*/
+}
+.infoCar a{
+  color: #fff;
+  text-decoration: none;
+}
+.infoCar span{
+  display: block;
+  padding: 5px 10px;
+  text-align: center;
+  background: #3cb4d3;
+  margin-top: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.infoCar .sWA{
+  background: #6db938;
+}
+/* Akhir Armada */
+
+/* pelayanan kami */
+.pelayanan{
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+.bgLayanan{
+  min-height: 250px;
+  background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.6)),url(../img/zenix.png);
+  background-size: cover;
+  background-position: center;
+  color: #ddd;
+  padding: 15px;
+}
+.bgLayanan h2{
+  color: rgb(213,194,156);
+}
+.bgLayanan span{
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #fff;
+  width: fit-content;
+  background: rgba(255,255,255,.4);
+}
+.bgLayanan a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.bwhy{
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+}
+.bwhy .container{
+  text-align: center;
+}
+.iwhy{
+  max-width: 800px;
+  margin: auto;
+  background: #3cb4d3;
+}
+.iwhy .wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  justify-content: space-between;
+}
+.ifitc,.ifit{
+  width: 48%;
+  background: #fff;
+  margin-top: -110px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+.ifit{
+  margin-top: 0;
+}
+.fitcar{
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  background: #aaa;
+  border-radius: 50%;
+  display: flex;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+/* Akhir pelayanan */
+
+/* footer */
+.bottom{
+  max-width: 800px;
+  background: #144458;
+  margin: auto;
+  position: relative;
+}
+.logomab{
+  width: 60px;
+  height: 45px;
+  background: #000;
+  border-radius: 5px;
+  border: 1.5px solid #aaa;
+  overflow: hidden;
+}
+.boxadrs{
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.adrs{
+  width: 100%;
+  color:#a3cde2;
+}
+.maps{
+  width: 100%;
+  height: 260px;
+  background: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.boxsosmed{
+  display: flex;
+  margin: 25px 10px;
+}
+.fb,.ig,.tiktok,.ytub{
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+}
+.cr{
+  width: 100%;
+  background: #000;
+  text-align: center;
+  padding: 25px;
+  font-size: 13px;
+  color: #aaa;
+}
+/* akhir footer */
+.bttnscroll,.pupupwa{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 20px;
+  border-radius: 10px;
+  display: none;
+  cursor: pointer;
+}
+.bttnscroll{
+  bottom: 15px;
+  background: rgba(0,0,0,.3);
+}
+.pupupwa{
+  bottom: 89px;
+}
+
+
+/* LAYAR COMPUTER */
+@media(min-width: 768px){
+  
+  .container,.boxHeader{
+    padding: 10px;
+  }
+  header .navmenu{
+    display: none;
+  }
+  .boxMenuNav{
+    display: none;
+  }
+  .jumbotron{
+    /*height: 435px;*/
+  }
+  .navbar{
+    display: flex;
+  }
+  .navbar p{
+    margin-left: 20px;
+  }
+  .crdDsc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card,.dsc{
+    width: 48%;
+  }
+  .armada p{
+    width: 485px;
+    margin: auto;
+  }
+  .boxCar{
+    width: 24%;
+  }
+  .bgLayanan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .bgLayanan span{
+    width: 30%;
+  }
+  .promosi{
+    width: 60%;
+  }
+  .ifit,.ifitc{
+    width: 24%;
+    margin-top: -110px;
+  }
+  .maps,.adrs{
+    width: 49%;
+    justify-content: space-between;
+  }
+  .maps{
+    margin-top: -55px;
+    margin-bottom: 40px;
+  }
+  .boxsosmed{
+    display: none;
+  }
+}
+
+/* LAYAR HANDPHONE */
+@media(max-width: 500px){
+  .container,.boxHeader{
+    padding: 10px;
+  }
+  header .boxHeader{
+    padding: 10px;
+  }
+  header .navbar{
+  display: none;
+  }
+  .card{
+    height: 220px;
+  }
+}
